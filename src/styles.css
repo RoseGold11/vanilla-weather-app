@@ -1,0 +1,78 @@
+.weather-app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 25px solid #fef7f9;
+  background-color: #ffd0db;
+}
+.dark-border {
+  max-width: 800px;
+  margin: 35px auto;
+  border: 3px solid #ffd0db;
+}
+
+h1,
+h4 {
+  color: #fef7f9;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  left: 12px;
+  line-height: 1;
+}
+h4 {
+  font-size: 17px;
+  font-weight: bold;
+}
+input {
+  width: 310px;
+  padding: 10px;
+  position: relative;
+  top: 12px;
+  right: 0px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  border: 3px solid #ff5d85;
+  border-radius: 15px;
+  box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.2);
+}
+li {
+  line-height: 1.5;
+  color: #fef7f9;
+  list-style: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+h2,
+.display-5 {
+  text-align: center;
+  color: #fef7f9;
+}
+
+a {
+  color: #ff7295;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: #fef7f9;
+}
+small {
+  padding: 15px;
+  color: #fef7f9;
+  font-family: "Raleway", sans-serif;
+}
+.measurement {
+  font-size: 20px;
+}
+.current-temperature {
+  font-family: "Nanum Gothic", sans-serif;
+}
+.measurement {
+  position: relative;
+  top: -37px;
+}
+.special {
+  border-right: 2px solid #ff5d85;
+}
