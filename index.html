@@ -15,7 +15,84 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hello World</h1>
+      <div class="light-border">
+        <div class="row justify-content-between">
+          <div class="col-4">
+            <h1 class="display-2" id="city">
+              <em> Orlando </em>
+            </h1>
+            <h4 id="date-and-time">Date</h4>
+          </div>
+          <div class="col-4">
+            <form id="search-form">
+              <input type"submit" value"Search" placeholder="Enter your city...
+              " id="city-input"/>
+            </form>
+          </div>
+        </div>
+        <h3 class="display-4">☀️</h3>
+        <h2 class="display-1">
+          <span id="current-temperature"> 26 </span>
+          <span class="measurement" id="units">
+            <a href="#" id="celcius"> °C </a>
+            |
+            <a href="#" id="farenheit"> °F </a>
+          </span>
+        </h2>
+
+        <div class="row">
+          <div class="col special">
+            <div class="days">Wednesday</div>
+            <div class="emoji">⛅️</div>
+            <div class="temp">29° | 19°</div>
+          </div>
+
+          <div class="col special">
+            <div class="days">Thursday</div>
+            <div class="emoji">⛅️</div>
+            <div class="temp">28° | 18°</div>
+          </div>
+
+          <div class="col special">
+            <div class="days">Friday</div>
+            <div class="emoji">⛅️</div>
+            <div class="temp">30° | 19°</div>
+          </div>
+
+          <div class="col special">
+            <div class="days">Saturday</div>
+            <div class="emoji">⛅️</div>
+            <div class="temp">30° | 20°</div>
+          </div>
+
+          <div class="col">
+            <div class="days">Sunday</div>
+            <div class="emoji">⛅️</div>
+            <div class="temp">21° | 15°</div>
+          </div>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col-4">
+            <ul>
+              <li>Wind ————————— 15mph</li>
+              <li>Humidity ————————— 51%</li>
+              <li>Precipitation ———————— 1%</li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <button id="current-button">
+              <strong> Current Location </strong>
+            </button>
+          </div>
+        </div>
+        <small>
+          <a
+            href="https://github.com/RoseGold11/vanilla-weather-app"
+            target="blank"
+            >Open-source code</a
+          >, by Rachael Moten
+        </small>
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>
