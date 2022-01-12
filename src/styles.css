@@ -12,7 +12,7 @@
 }
 
 h1,
-h4 {
+.date-and-time {
   color: #fef7f9;
   text-align: left;
   font-family: "Raleway", sans-serif;
@@ -20,9 +20,9 @@ h4 {
   left: 12px;
   line-height: 1;
 }
-h4 {
+.date-and-time .weather-description {
   font-size: 17px;
-  font-weight: bold;
+  font-family: "Raleway", sans-serif;
 }
 input {
   width: 310px;
@@ -33,7 +33,6 @@ input {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   border: 3px solid #ff5d85;
-  border-radius: 15px;
   box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.2);
 }
 li {
@@ -45,7 +44,8 @@ li {
 }
 
 h2,
-.display-5 {
+.display-5,
+.weather-description {
   text-align: center;
   color: #fef7f9;
 }
@@ -73,6 +73,6 @@ small {
   position: relative;
   top: -37px;
 }
-.special {
+.line {
   border-right: 2px solid #ff5d85;
 }
