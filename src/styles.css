@@ -44,8 +44,6 @@ li {
   line-height: 1.5;
   color: #fef7f9;
   list-style: none;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
 }
 
 h2,
@@ -53,6 +51,7 @@ h2,
 .weather-description {
   text-align: center;
   color: #fef7f9;
+  text-transform: capitalize;
 }
 
 a {
@@ -80,4 +79,11 @@ small {
 }
 .line {
   border-right: 2px solid #ff7295;
+}
+.wind,
+.humidity {
+  font-family: "Raleway", sans-serif;
+}
+.words {
+  font-family: "Raleway", sans-serif;
 }
