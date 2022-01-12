@@ -24,7 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
       rel="stylesheet"
     />
-    <title>Weather App</title>
+    <title>☀️Weather App</title>
   </head>
   <body>
     <div class="container">
@@ -35,7 +35,11 @@
               <h1 class="display-2" id="city">
                 <em> Orlando </em>
               </h1>
-              <h4 class="date-and-time" id="date-and-time"><em>Date</em></h4>
+              <h4 class="date-and-time">
+                <em class="date">Last updated: <span id="date">Date</span></em>
+                <em class="date">|</em>
+                <em class="time" id="time">Time</em>
+              </h4>
             </div>
             <div class="col">
               <form id="search-form">

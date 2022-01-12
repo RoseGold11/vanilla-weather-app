@@ -13,16 +13,22 @@
   border-radius: 12px;
 }
 
+h1 {
+  font-family: "Raleway", sans-serif;
+}
 h1,
-.date-and-time {
+.date,
+.time {
   color: #fef7f9;
   text-align: left;
-  font-family: "Raleway", sans-serif;
   position: relative;
   left: 12px;
   line-height: 1;
 }
-.date-and-time .weather-description {
+.date-and-time {
+  font-weight: 200;
+}
+.date .weather-description {
   font-size: 17px;
   font-family: "Raleway", sans-serif;
 }
@@ -51,6 +57,8 @@ h2,
 .weather-description {
   text-align: center;
   color: #fef7f9;
+}
+.weather-description:first-letter {
   text-transform: capitalize;
 }
 
@@ -86,4 +94,7 @@ small {
 }
 .words {
   font-family: "Raleway", sans-serif;
+}
+.time {
+  font-family: "Nanum Gothic", sans-serif;
 }

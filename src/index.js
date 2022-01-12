@@ -15,3 +15,19 @@ let apiKey = `eb371e3285b37d59db8fd3917da1ca94`;
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Seattle&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let date = new Date();
+let day = days[date.getDay()];
+let hours = date.getHours();
+let minutes = date.getMinutes();
+document.querySelector("#date").innerHTML = `${day}`;
+document.querySelector("#time").innerHTML = `${hours}:${minutes}`;
