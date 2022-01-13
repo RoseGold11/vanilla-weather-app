@@ -77,15 +77,14 @@ small {
   color: #fef7f9;
   font-family: "Raleway", sans-serif;
 }
-.measurement {
-  font-size: 20px;
-}
 .current-temperature {
   font-family: "Nanum Gothic", sans-serif;
 }
 .measurement {
   position: relative;
   top: -37px;
+  font-size: 20px;
+  font-weight: bold;
 }
 .line {
   border-right: 2px solid #ff7295;
