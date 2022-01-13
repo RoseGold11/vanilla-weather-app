@@ -99,3 +99,8 @@ small {
 .time {
   font-family: "Nanum Gothic", sans-serif;
 }
+.active {
+  color: #fef7f9;
+  text-decoration: none;
+  cursor: default;
+}

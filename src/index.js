@@ -1,4 +1,4 @@
-function formatDate(timestamp) {
+function displayDate(timestamp) {
   let date = new Date(timestamp);
   let days = [
     "Sunday",
@@ -26,9 +26,9 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 function displayTemperature(response) {
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celciusTemperature = response.data.main.temp;
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celciusTemperature);
   document.querySelector("#city").innerHTML = `<em>${response.data.name}</em>`;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -45,19 +45,37 @@ function displayTemperature(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", `${response.data.weather[0].main}`);
-  document.querySelector("#date").innerHTML = formatDate(
+  document.querySelector("#date").innerHTML = displayDate(
     response.data.dt * 1000
   );
 }
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemperature = Math.round((26 * 9) / 5 + 32);
-  document.querySelector("#temperature").innerHTML = fahrenheitTemperature;
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = Math.round((celciusTemperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = fahrenheitTemperature;
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
-search(`Orlando`);
+
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+  fahrenheitLink.classList.remove("active");
+  celciusLink.classList.add("active");
+}
+
+let celciusTemperature = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", displayCelciusTemperature);
+
+search(`Orlando`);
