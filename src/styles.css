@@ -27,41 +27,18 @@ h1,
   font-weight: normal;
 }
 
-.date .weather-description {
-  font-size: 17px;
-  font-family: "Raleway", sans-serif;
-}
-.search-form {
-  width: 290px;
-  padding: 10px;
-  position: relative;
-  top: 15px;
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
-  border: 3px solid #ff7295;
-  border-radius: 12px;
-  box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.2);
-  background-color: #fef7f9;
-  color: #ff7295;
-}
-
-li {
-  line-height: 1.5;
-  color: #fef7f9;
-  list-style: none;
-  font-weight: bold;
-}
-
 h2,
 .display-5,
 .weather-description {
   text-align: center;
   color: #fef7f9;
 }
-.weather-description:first-letter {
-  text-transform: capitalize;
+li {
+  line-height: 1.5;
+  color: #fef7f9;
+  list-style: none;
+  font-weight: bold;
 }
-
 a {
   color: #ff7295;
   font-weight: bold;
@@ -77,6 +54,28 @@ small {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
 }
+.search-form {
+  width: 290px;
+  padding: 10px;
+  position: relative;
+  top: 15px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  border: 3px solid #ff7295;
+  border-radius: 12px;
+  box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.2);
+  background-color: #fef7f9;
+  color: #ff7295;
+}
+.date .weather-description {
+  font-size: 17px;
+  font-family: "Raleway", sans-serif;
+}
+
+.weather-description:first-letter {
+  text-transform: capitalize;
+}
+
 .current-temperature {
   font-family: "Nanum Gothic", sans-serif;
 }
@@ -96,18 +95,11 @@ small {
 .words {
   font-family: "Raleway", sans-serif;
 }
-.time {
-  font-family: "Nanum Gothic", sans-serif;
-}
+
 .active {
   color: #fef7f9;
   text-decoration: none;
   cursor: default;
-}
-.forecast-day {
-  font-family: "Raleway", sans-serif;
-  font-size: 20px;
-  font-style: italic;
 }
 .forecast {
   margin: 20px;
@@ -118,6 +110,11 @@ small {
   border: 2px solid #ff7295;
   border-radius: 12px;
   box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.forecast-day {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-style: italic;
 }
 .forecast-temperature {
   font-family: "Nanum Gothic", sans-serif;
