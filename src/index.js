@@ -15,6 +15,13 @@ function displayDate(timestamp) {
   return `${day} | ${hours} : ${minutes}`;
 }
 
+function formatDays(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[date.getDay()];
+  return day;
+}
+
 function findForecast(coordinates) {
   let apiKey = `eb371e3285b37d59db8fd3917da1ca94`;
   let forecastApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
@@ -22,32 +29,39 @@ function findForecast(coordinates) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+  console.log(forecast);
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+
   let forecastHTML = `<div class="row">`;
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="col-2">
-      <div class="forecast-day">${day}</div>
+      <div class="forecast-day">${formatDays(forecastDay.dt)}</div> 
       <div class="forecast-icon" id="forecast-icon">
         <img
-          src="http://openweathermap.org/img/wn/03n@2x.png"
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
           alt=""
           width="40px"
         />
       </div>
       <div class="forecast-temperature">
         <span class="forecast-temperature-high" id="forecast-temperature-high">
-          18
+          ${Math.round(forecastDay.temp.max)}
         </span>
-        ° <span class="forecast-temperature-low">12</span>°
+        ° <span class="forecast-temperature-low">${Math.round(
+          forecastDay.temp.min
+        )}</span>°
       </div>
     </div>
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -120,4 +134,3 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
 search(`Orlando`);
-displayForecast();

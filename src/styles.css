@@ -24,7 +24,7 @@ h1,
   left: 12px;
   line-height: 1;
   font-style: italic;
-  font-weight: 200;
+  font-weight: normal;
 }
 
 .date .weather-description {
@@ -49,6 +49,7 @@ li {
   line-height: 1.5;
   color: #fef7f9;
   list-style: none;
+  font-weight: bold;
 }
 
 h2,
@@ -74,6 +75,7 @@ small {
   padding: 15px;
   color: #fef7f9;
   font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
 .current-temperature {
   font-family: "Nanum Gothic", sans-serif;
