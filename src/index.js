@@ -14,6 +14,38 @@ function displayDate(timestamp) {
   let minutes = date.getMinutes();
   return `${day} | ${hours} : ${minutes}`;
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="forecast-day">${day}</div>
+      <div class="forecast-icon" id="forecast-icon">
+        <img
+          src="http://openweathermap.org/img/wn/03n@2x.png"
+          alt=""
+          width="40px"
+        />
+      </div>
+      <div class="forecast-temperature">
+        <span class="forecast-temperature-high" id="forecast-temperature-high">
+          18
+        </span>
+        ° <span class="forecast-temperature-low">12</span>°
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function search(city) {
   let apiKey = `eb371e3285b37d59db8fd3917da1ca94`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -79,3 +111,4 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
 search(`Orlando`);
+displayForecast();
